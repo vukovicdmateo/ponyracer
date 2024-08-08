@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 3,
-    "passes": 3,
+    "tests": 4,
+    "passes": 4,
     "pending": 0,
     "failures": 0,
-    "testsRegistered": 3,
+    "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2024-08-08T06:44:42.406Z",
-    "end": "2024-08-08T06:44:42.869Z",
-    "duration": 463
+    "start": "2024-08-08T07:10:03.795Z",
+    "end": "2024-08-08T07:10:04.484Z",
+    "duration": 689
   },
   "results": [
     {
-      "uuid": "2478ece3-e152-46a8-890b-f8e144ba037c",
+      "uuid": "0e0e3f6e-f722-496a-a1a9-23b9422e5152",
       "title": "",
       "fullFile": "cypress/e2e/home.cy.ts",
       "file": "cypress/e2e/home.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e76bce1a-0f1d-4de0-b6ba-673f392156c7",
+          "uuid": "54da73b5-c451-47f2-a5ce-cf2c72469542",
           "title": "Ponyracer",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should display title on home page",
               "fullTitle": "Ponyracer should display title on home page",
               "timedOut": null,
-              "duration": 171,
+              "duration": 236,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit('/');\ncy.contains('h1', 'Ponyracer');",
               "err": {},
-              "uuid": "5ea1241b-d83f-42d7-98f7-42f8ad4d7613",
-              "parentUUID": "e76bce1a-0f1d-4de0-b6ba-673f392156c7",
+              "uuid": "12626d9d-c11d-4f14-beff-4890bcae4615",
+              "parentUUID": "54da73b5-c451-47f2-a5ce-cf2c72469542",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.visit('/');\ncy.contains(navbarBrand, 'PonyRacer');\ncy.contains(navbarLink, 'Races');",
               "err": {},
-              "uuid": "3c872ed8-bf8a-4696-9845-7fd92d67119f",
-              "parentUUID": "e76bce1a-0f1d-4de0-b6ba-673f392156c7",
+              "uuid": "3f3e53e5-708a-4066-9b14-6ff73ef1e0ba",
+              "parentUUID": "54da73b5-c451-47f2-a5ce-cf2c72469542",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "should display a navbar collapsed on small screen",
               "fullTitle": "Ponyracer should display a navbar collapsed on small screen",
               "timedOut": null,
-              "duration": 156,
+              "duration": 176,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,41 @@
               "context": null,
               "code": "cy.viewport('iphone-6+');\ncy.visit('/');\ncy.contains(navbarBrand, 'PonyRacer');\ncy.get(navbarLink).should('not.be.visible');\n// toggle the navbar\ncy.get('.navbar-toggler').click();\ncy.get(navbarLink).should('be.visible');",
               "err": {},
-              "uuid": "2a5fddb0-cd07-4376-b8b0-a0c5490c5be5",
-              "parentUUID": "e76bce1a-0f1d-4de0-b6ba-673f392156c7",
+              "uuid": "c24a0ba4-df92-4df9-a53e-058f4e7169e9",
+              "parentUUID": "54da73b5-c451-47f2-a5ce-cf2c72469542",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display a race list",
+              "fullTitle": "Ponyracer should display a race list",
+              "timedOut": null,
+              "duration": 100,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('h2').should('have.length', 2);",
+              "err": {},
+              "uuid": "4816a465-aaec-4297-a3fc-fe80c6d48d0d",
+              "parentUUID": "54da73b5-c451-47f2-a5ce-cf2c72469542",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5ea1241b-d83f-42d7-98f7-42f8ad4d7613",
-            "3c872ed8-bf8a-4696-9845-7fd92d67119f",
-            "2a5fddb0-cd07-4376-b8b0-a0c5490c5be5"
+            "12626d9d-c11d-4f14-beff-4890bcae4615",
+            "3f3e53e5-708a-4066-9b14-6ff73ef1e0ba",
+            "c24a0ba4-df92-4df9-a53e-058f4e7169e9",
+            "4816a465-aaec-4297-a3fc-fe80c6d48d0d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 395,
+          "duration": 580,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
